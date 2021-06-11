@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.parent {
+    display: grid;
+    grid-template-areas: "header" "months" "days" "selection" "autorization"
+}
+
+
+
+h1 {
+    grid-area: header;
+    text-align: center;
+}
+
+p {
+    grid-area: months;
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+.dayTable {
+    display: grid;
+    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-area: days;
+}
+
+.answers {
+    display: grid;
+    justify-content: center;
+    grid-area: selection;
+    grid-template-areas: "positive ambivalent negative";
+    grid-template-columns: 30% 100px 30%;
+}
+
+.footer {
+    grid-area: autorization;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.weekend {
+    color: red;
+    text-align: center;
+}
+
+.day:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+
+}
+.weekend:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.select {
+    grid-area: title;
+}
+
+.positiveAnswer {
+    text-align: right;
+    grid-area: positive;
+}
+.ambivalentAnswer {
+    grid-area: ambivalent;
+}
+.negativeAnswer {
+    text-align: left;
+    grid-area: negative;
+}
+.positiveAnswer:hover {
+    color: grey;
+}
+.ambivalentAnswer:hover {
+    color: grey;
+}
+.negativeAnswer:hover {
+    color: grey;
+}
