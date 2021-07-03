@@ -1,1 +1,109 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+.ui.modal {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.2em;
+    display: grid;
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: "meeting meeting" "aim aimText" "creator creatorName" "exitButton button";
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 10px;
+    background: white;
+    width: 280px;
+    height: 35vh;
+    margin: auto;
+    border: 30px solid rgba(0,0,0,0.1);
+    background-clip: border-box;
+    border-radius:12px;
+    -moz-background-clip: padding; 
+    background-clip: padding-box; 
+    background-clip: content-box;
+}
+label {
+    text-align: right;
+    padding-right:10px;
+}
+.creatorName {
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border:1px solid black;
+}
+.aimValue {
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.createMeeting {
+    grid-area: meeting;
+}
+.codeValue {
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.nameValue {
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 15px;
+    background-color: white;
+}
+.exitButton {
+    display: grid;
+    justify-self: right;
+    align-items: center;
+    justify-content: center;
+    grid-area: exitButton;
+    width: 80px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.createButton {
+    display: grid;
+    justify-self: left;
+    align-items: center;
+    justify-content: center;
+    grid-area: button;
+    width: 80px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.approveButton {
+    display: grid;
+    justify-self: left;
+    align-items: center;
+    justify-content: center;
+    grid-area: button;
+    width: 80px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+}

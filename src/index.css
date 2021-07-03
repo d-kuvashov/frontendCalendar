@@ -1,76 +1,103 @@
+/*Standart*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 .parent {
     display: grid;
-    grid-template-areas: "header" "months" "days" "selection" "autorization"
+    grid-template-areas: "header" "months" "days" "selection" "otherHumans" "autorization"
 }
-
-
-
 h1 {
     grid-area: header;
     text-align: center;
 }
-
 p {
-    grid-area: months;
     text-align: center;
 }
-
 div {
     text-align: center;
 }
+ul {
+    list-style: none;
+}
 
+/*Main window*/
+/*Top part*/
+
+.monthSelection {
+    display: grid;
+    grid-area: months;
+    text-align: center;
+    grid-template-columns: 33% 33% 33%
+}
+.week {
+    display: grid;
+    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+    padding-inline-start: 0px;
+}
+
+/*Middle part*/
 .dayTable {
     display: grid;
     grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
-    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh;
     grid-area: days;
+    margin-bottom: 95px;
+}
+.weekend {
+    color: #ECC49C;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+.day {
+    text-decoration: underline;
+    text-decoration-color: white;
 }
 
+
+/*Bottom part*/
+.select {
+    grid-area: title;
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    bottom: 65px;
+    left: 0;
+}
 .answers {
     display: grid;
     justify-content: center;
     grid-area: selection;
     grid-template-areas: "positive ambivalent negative";
     grid-template-columns: 30% 100px 30%;
+    background-color: white;
+    width: 100vw;
+    height: 30px;
+    position: fixed;
+    bottom: 35px;
+    left: 0;
 }
-
-.footer {
-    grid-area: autorization;
+.showFreeDays {
+    grid-area: otherHumans;
+    background-color: white;
     display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.weekend {
-    color: red;
-    text-align: center;
-}
-
-.day:hover {
-    text-decoration: underline;
-    text-decoration-color: red;
-
-}
-.weekend:hover {
-    text-decoration: underline;
-    text-decoration-color: red;
-}
-
-.select {
-    grid-area: title;
+    position: fixed;
+    width: 100vw;
+    height: 20px;
+    margin-bottom: 15px;
+    bottom: 0;
+    left: 0;
 }
 
 .positiveAnswer {
@@ -79,11 +106,14 @@ div {
 }
 .ambivalentAnswer {
     grid-area: ambivalent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.8em;
 }
 .negativeAnswer {
     text-align: left;
     grid-area: negative;
 }
+
 .positiveAnswer:hover {
     color: grey;
 }
