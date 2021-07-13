@@ -3,9 +3,10 @@
     font-family: 'Amatic SC', cursive;
     font-size: 1.2em;
     display: grid;
-    position: absolute;
-    top: 0 !important;
-    left: 0 !important;
+    position: fixed;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
     opacity: 1;
     width: 100%;
     height: 100%;
@@ -20,14 +21,17 @@
     grid-row-gap: 10px;
     background: white;
     width: 280px;
+    max-width: 100%;
     height: 35vh;
-    margin: auto;
+    margin-top: 32vh;
+    margin-left: auto;
+    margin-right: auto;
     border: 30px solid rgba(0,0,0,0.1);
     background-clip: border-box;
-    border-radius:12px;
-    -moz-background-clip: padding; 
     background-clip: padding-box; 
     background-clip: content-box;
+    border-radius:12px;
+    -moz-background-clip: padding; 
 }
 label {
     text-align: right;

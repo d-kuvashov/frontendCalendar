@@ -82,24 +82,36 @@ ul {
     grid-template-areas: "positive ambivalent negative";
     grid-template-columns: 30% 100px 30%;
     background-color: white;
-    width: 100vw;
+    width: 90%;
+    margin-left: 5%;
     height: 30px;
     position: fixed;
     bottom: 35px;
     left: 0;
 }
-.showFreeDays {
+.bottomPanel {
+    flex-direction: row;
     grid-area: otherHumans;
     background-color: white;
     display: grid;
+    grid-template-columns: 50% 50%;
     position: fixed;
-    width: 100vw;
+    width: 90%;
     height: 20px;
-    margin-bottom: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 15px;
     bottom: 0;
     left: 0;
 }
-
+.showFreeDays {
+    text-align: right;
+    margin-right: 10px;
+}
+.prove{
+    text-align: left;
+    margin-left: 10px;
+}
 .positiveAnswer {
     text-align: right;
     grid-area: positive;

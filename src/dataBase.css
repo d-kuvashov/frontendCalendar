@@ -1,0 +1,52 @@
+.contentA {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "header1 header1" "text text" "button1 button2";
+    grid-row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 280px;
+    max-width: 100%;
+    height: 40vh;
+    margin-top: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: 30px solid rgba(0,0,0,0.1);
+    background-clip: border-box;
+    background-clip: padding-box; 
+    background-clip: content-box;
+    border-radius:12px;
+    -moz-background-clip: padding; 
+}
+.justHeader {
+    display: grid;
+    grid-area: header1;
+}
+.justText {
+    grid-area: text;
+}
+.changeButton {
+    display: grid;
+    grid-area: button1;
+    justify-self: right;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.closeButton {
+    display: grid;
+    grid-area: button2;
+    justify-self: left;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
